@@ -2,6 +2,7 @@ package ca.qurtuba.app001membersapprovalletter.controller;
 
 import ca.qurtuba.app001membersapprovalletter.domain.Client;
 import ca.qurtuba.app001membersapprovalletter.domain.ClientResponse;
+import ca.qurtuba.app001membersapprovalletter.domain.Announcement;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -24,15 +25,16 @@ public class ClientsController {
         return new ResponseEntity<>(clientResponse, HttpStatus.OK);
     }
 
-    // Homework
-    /*
-    * Create new Request mapping with GET method , path /qurtabaaccounment consumens JSON
-    * Return ResponseEntity with Accountment Object with status 201
-    * Accountment object has 3 properties (title/String , Date/String, URL/String)
-    * Do Setters and Getters
-    * */
+    @RequestMapping(path = "/qurtubaannouncement", method = RequestMethod.GET , consumes = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Announcement> qurtubaAnnouncement() {
+        Announcement announcement = new Announcement();
+        announcement.date = "";
+        announcement.path= "";
+        announcement.title = "This is the title";
 
-    // TO Create Data
+        return new ResponseEntity<> (announcement, HttpStatus.OK);
+    }
+
     @RequestMapping(path = "/clientName1",method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public String getName1(){
         return "";
