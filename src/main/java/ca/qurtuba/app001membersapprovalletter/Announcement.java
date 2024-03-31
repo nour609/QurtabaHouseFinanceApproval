@@ -9,6 +9,9 @@ public class Announcement {
         this.availableApprovalLetters = availableApprovalLetters;
     }
 
+    public Announcement(String firstQuarter, String s, String s1) {
+    }
+
     public int getQuarter() {
         return quarter;
     }
@@ -16,4 +19,7 @@ public class Announcement {
     public int getAvailableApprovalLetters() {
         return availableApprovalLetters;
     }
+
+
+
 }
