@@ -9,6 +9,16 @@ public class ClientResponse {
 
     Client client;
 
+    public String getWifeName() {
+        return wifeName;
+    }
+
+    public void setWifeName(String wifeName) {
+        this.wifeName = wifeName;
+    }
+
+    String wifeName;
+
     public Client getClient() {
         return client;
     }

@@ -1,6 +1,13 @@
 package ca.qurtuba.app001membersapprovalletter.domain;
 
 public class Announcement {
+
+    public String title;
+    public String date;
+    public String path;
+
+    public Announcement() {
+    }
     public String getTitle() {
         return title;
     }
@@ -17,20 +24,13 @@ public class Announcement {
         this.date = date;
     }
 
-    public String getURL() {
+    public String getPath() {
         return path;
     }
 
-    public void setURL(String URL) {
-        this.path = URL;
+    public void setPath(String path) {
+        this.path = path;
     }
 
-    public String title;
-    public String date;
-    public String path;
 
-
-
-    public Announcement() {
-    }
 }
