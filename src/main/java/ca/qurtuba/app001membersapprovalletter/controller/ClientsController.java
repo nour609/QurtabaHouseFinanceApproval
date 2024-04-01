@@ -25,10 +25,7 @@ public class ClientsController {
 
     @RequestMapping(path = "/qurtubaannouncement", method = RequestMethod.GET , consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Announcement> qurtubaAnnouncement() {
-        Announcement announcement = new Announcement();
-        announcement.setDate("");
-        announcement.setPath("");
-        announcement.setTitle("This is the title");
+        Announcement announcement = clientService.buildClientAnnouncement();
 
         return new ResponseEntity<>(announcement, HttpStatus.OK);
     }
@@ -37,7 +34,7 @@ public class ClientsController {
     public String getName1(){
         return "";
     }
-    // TO Delete Data
+    // TO Delete All Data
     @RequestMapping(name = "", method = RequestMethod.DELETE, consumes = MediaType.APPLICATION_JSON_VALUE)
     public String getName2(){
         return "";

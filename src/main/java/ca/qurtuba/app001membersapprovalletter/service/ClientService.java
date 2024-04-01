@@ -24,6 +24,11 @@ public class ClientService implements ClientsService{
 
     @Override
     public Announcement buildClientAnnouncement() {
-        return null;
+        Announcement announcement = new Announcement();
+        announcement.setDate("");
+        announcement.setPath("");
+        announcement.setTitle("This is the title");
+
+        return announcement;
     }
 }
