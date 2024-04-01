@@ -34,7 +34,7 @@ public class ClientsController {
     public String getName1(){
         return "";
     }
-    // TO Delete All Data
+    // TO Delete Data
     @RequestMapping(name = "", method = RequestMethod.DELETE, consumes = MediaType.APPLICATION_JSON_VALUE)
     public String getName2(){
         return "";
