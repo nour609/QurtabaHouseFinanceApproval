@@ -1,4 +1,4 @@
-package ca.qurtuba.app001membersapprovalletter.domain;
+package ca.qurtuba.app001membersapprovalletter.domain.Client;
 
 public class Client {
 

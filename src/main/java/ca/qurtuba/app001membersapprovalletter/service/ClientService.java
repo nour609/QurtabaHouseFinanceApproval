@@ -1,8 +1,9 @@
 package ca.qurtuba.app001membersapprovalletter.service;
 
-import ca.qurtuba.app001membersapprovalletter.domain.Announcement;
-import ca.qurtuba.app001membersapprovalletter.domain.Client;
-import ca.qurtuba.app001membersapprovalletter.domain.ClientResponse;
+import ca.qurtuba.app001membersapprovalletter.domain.About.About;
+import ca.qurtuba.app001membersapprovalletter.domain.Announcement.AnnouncementRequest;
+import ca.qurtuba.app001membersapprovalletter.domain.Client.Client;
+import ca.qurtuba.app001membersapprovalletter.domain.Client.ClientResponse;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -12,6 +13,7 @@ public class ClientService implements ClientsService{
     public ClientResponse buildClientResponse() {
         ClientResponse clientResponse = new ClientResponse();
         Client client = new Client();
+
         client.setFirstName("Nour");
         client.setLastName("Eddin");
         clientResponse.setFirstName("Hussam Eddin");
@@ -23,12 +25,21 @@ public class ClientService implements ClientsService{
     }
 
     @Override
-    public Announcement buildClientAnnouncement() {
-        Announcement announcement = new Announcement();
-        announcement.setDate("");
-        announcement.setPath("");
-        announcement.setTitle("This is the title");
-
-        return announcement;
+    public AnnouncementRequest buildClientAnnouncement() {
+        AnnouncementRequest announcementRequest = new AnnouncementRequest();
+        return announcementRequest;
     }
+
+    @Override
+    public String welcomeMessage() {
+        return "Welcome to Qurtuba";
+    }
+
+    @Override
+    public About getAboutData() {
+        About about = new About();
+        return null;
+    }
+
+
 }

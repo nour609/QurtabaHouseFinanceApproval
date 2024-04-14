@@ -1,11 +1,17 @@
 package ca.qurtuba.app001membersapprovalletter.service;
 
-import ca.qurtuba.app001membersapprovalletter.domain.Announcement;
-import ca.qurtuba.app001membersapprovalletter.domain.ClientResponse;
+import ca.qurtuba.app001membersapprovalletter.domain.About.About;
+import ca.qurtuba.app001membersapprovalletter.domain.Announcement.AnnouncementRequest;
+import ca.qurtuba.app001membersapprovalletter.domain.Client.ClientResponse;
 
 public interface ClientsService {
 
     ClientResponse buildClientResponse();
 
-    Announcement buildClientAnnouncement();
+    AnnouncementRequest buildClientAnnouncement();
+
+    String welcomeMessage();
+
+
+    About getAboutData();
 }

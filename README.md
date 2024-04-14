@@ -5,7 +5,7 @@ The Qurtaba House Finance Approval App is a Java application designed to facilit
 
 ## Features
 - **User Authentication**: Members can log in using their credentials to access the application.
-- **Quarterly Announcement Display**: The application displays the announcement of the number of approval letters available for financing a house for each quarter.
+- **Quarterly Announcement Display**: The application displays the announcementRequest of the number of approval letters available for financing a house for each quarter.
 - **Participation Submission**: Members can submit their participation for a specific quarter by entering their membership ID.
 - **Random Selection**: The system performs a random selection of members from the pool of participants to allocate approval letters.
 - **Notification**: Notifies selected members about the approval of their application for financing.

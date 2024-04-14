@@ -1,7 +1,7 @@
 package ca.qurtuba.app001membersapprovalletter.controller;
 
-import ca.qurtuba.app001membersapprovalletter.domain.ClientResponse;
-import ca.qurtuba.app001membersapprovalletter.domain.Announcement;
+import ca.qurtuba.app001membersapprovalletter.domain.Client.ClientResponse;
+import ca.qurtuba.app001membersapprovalletter.domain.Announcement.AnnouncementRequest;
 import ca.qurtuba.app001membersapprovalletter.service.ClientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -16,24 +16,34 @@ public class ClientsController {
     @Autowired
     public ClientService clientService;
 
+    @RequestMapping(path = "/welcome", method = RequestMethod.GET, consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<String> welcomeMessage(){
+        String message = clientService.welcomeMessage();
+        return new ResponseEntity<>(message, HttpStatus.OK);
+    }
+
+    // Cerate new Request mapping for /about endpoint
+    // Return new domain About (Contact number, email address)
+
     // TO Read Data
-    @RequestMapping(path = "/clientName",method = RequestMethod.GET, consumes = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(path = "/clientName", method = RequestMethod.GET, consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<ClientResponse> getName(){
         ClientResponse clientResponse = clientService.buildClientResponse();
         return new ResponseEntity<>(clientResponse, HttpStatus.OK);
     }
 
     @RequestMapping(path = "/qurtubaannouncement", method = RequestMethod.GET , consumes = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Announcement> qurtubaAnnouncement() {
-        Announcement announcement = clientService.buildClientAnnouncement();
+    public ResponseEntity<AnnouncementRequest> qurtubaAnnouncement() {
+        AnnouncementRequest announcementRequest = clientService.buildClientAnnouncement();
 
-        return new ResponseEntity<>(announcement, HttpStatus.OK);
+        return new ResponseEntity<>(announcementRequest, HttpStatus.OK);
     }
 
     @RequestMapping(path = "/createClient",method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public String getName1(){
         return "";
     }
+
     // TO Delete Data
     @RequestMapping(name = "", method = RequestMethod.DELETE, consumes = MediaType.APPLICATION_JSON_VALUE)
     public String getName2(){
