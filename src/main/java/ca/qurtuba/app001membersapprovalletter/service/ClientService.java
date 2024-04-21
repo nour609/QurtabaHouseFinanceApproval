@@ -5,11 +5,10 @@ import ca.qurtuba.app001membersapprovalletter.domain.Announcement.AnnouncementRe
 import ca.qurtuba.app001membersapprovalletter.domain.About.About;
 
 import ca.qurtuba.app001membersapprovalletter.domain.Client.Client;
-import ca.qurtuba.app001membersapprovalletter.domain.Member.MemberResponse;
 import org.springframework.stereotype.Service;
 
 @Service
-public class ClientService implements ClientsService{
+public class ClientService implements IClientsService {
 
     @Override
     public ClientResponse buildClientResponse() {
@@ -46,17 +45,4 @@ public class ClientService implements ClientsService{
     public String welcomeMessage() {
         return "Welcome to Qurtuba";
     }
-
-    @Override
-    public String email() {
-        return "nour@qurtuba.ca";
-    }
-
-    @Override
-    public String totalMembers() {
-        return "300";
-    }
-
-
-
 }

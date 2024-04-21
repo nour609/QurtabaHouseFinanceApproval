@@ -19,6 +19,4 @@ public class About {
 
     private String contactNumber;
     private String emailAddress;
-
-
 }

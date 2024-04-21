@@ -2,19 +2,12 @@ package ca.qurtuba.app001membersapprovalletter.domain.Member;
 
 public class MemberResponse {
 
-    int NumbersOfMembers ;
-    int MembersParticipatedWithinQ1 ;
-    int MembersParticipatedWithinQ2 ;
-    int MembersParticipatedWithinQ3 ;
-    int MembersParticipatedWithinQ4 ;
+    private int NumbersOfMembers ;
+    private int MembersParticipatedWithinQ1 ;
+    private int MembersParticipatedWithinQ2 ;
+    private int MembersParticipatedWithinQ3 ;
+    private int MembersParticipatedWithinQ4 ;
 
-/*
-    int NumbersOfMembers = 300;
-    int MembersParticipatedWithinQ1 = NumbersOfMembers / 4;
-    int MembersParticipatedWithinQ2 = NumbersOfMembers / 3;
-    int MembersParticipatedWithinQ3 = NumbersOfMembers / 2;
-    int MembersParticipatedWithinQ4 = NumbersOfMembers - MembersParticipatedWithinQ1 - MembersParticipatedWithinQ3 + 1;
-*/
 
     public int getNumbersOfMember() {
         return NumbersOfMembers;

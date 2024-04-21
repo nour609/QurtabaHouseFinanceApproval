@@ -1,5 +1,6 @@
 package ca.qurtuba.app001membersapprovalletter.controller;
 
+import ca.qurtuba.app001membersapprovalletter.domain.About.About;
 import ca.qurtuba.app001membersapprovalletter.domain.Client.ClientResponse;
 import ca.qurtuba.app001membersapprovalletter.domain.Announcement.AnnouncementRequest;
 import ca.qurtuba.app001membersapprovalletter.domain.Member.MemberResponse;
@@ -17,7 +18,10 @@ public class ClientsController {
 
     // To access OPENAPI Doc http://localhost:8080/swagger-ui/index.html#/
     @Autowired
-    public ClientService clientService;
+    private ClientService clientService;
+
+    @Autowired
+    private MemberService memberService;
 
     @RequestMapping(path = "/welcome", method = RequestMethod.GET, consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<String> welcomeMessage(){
@@ -27,24 +31,17 @@ public class ClientsController {
 
     // Cerate new Request mapping for /about endpoint
     @RequestMapping (path = "/about", method = RequestMethod.GET, consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<String> AboutUs(){
-        String about = clientService.About();
-
+    public ResponseEntity<About> AboutUs(){
+        About about = clientService.getAboutData();
         return new ResponseEntity<>(about, HttpStatus.OK);
     }
 
-    // Cerate new Request mapping for /email address
-    @RequestMapping (path = "email", method = RequestMethod.GET , consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<String> email(){
-        String myemail = clientService.email();
-        return new ResponseEntity<>(myemail, HttpStatus.OK);
-}
 
     // Cerate new Request to show the number of members
     @RequestMapping (path = "/totalMembers", method = RequestMethod.GET , consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<String> totalMembers(){
-        String toatlMembers = clientService.totalMembers();
-        return new ResponseEntity<>(toatlMembers, HttpStatus.OK);
+    public ResponseEntity<MemberResponse> totalMembers(){
+        MemberResponse totalMembers = memberService.getAllMembers();
+        return new ResponseEntity<>(totalMembers, HttpStatus.OK);
     }
 
     // TO Read Data
@@ -65,9 +62,7 @@ public class ClientsController {
     @RequestMapping(path = "/Memebers", method = RequestMethod.GET, consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<MemberResponse> getNumbersOfMember () {
 
-        MemberResponse memberResponse = MemberService.getNumbersOfMember();
-
-
+        MemberResponse memberResponse = memberService.getAllMembers();
         return new ResponseEntity<>(memberResponse, HttpStatus.OK);
 
     }
