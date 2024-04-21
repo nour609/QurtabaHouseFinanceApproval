@@ -1,14 +1,14 @@
 # Qurtaba House Finance Approval App
 
 ## Description
-The Qurtaba House Finance Approval App is a Java application designed to facilitate the process of obtaining approval letters for financing a house. The app allows Qurtaba members to participate in quarterly competitions to obtain approval letters announced by Qurtaba for each quarter.
+The Qurtaba House Finance Approval App is a Java application designed to facilitate the process of obtaining approval letters for financing a house. The app allows Qurtaba memberResponse to participate in quarterly competitions to obtain approval letters announced by Qurtaba for each quarter.
 
 ## Features
 - **User Authentication**: Members can log in using their credentials to access the application.
 - **Quarterly Announcement Display**: The application displays the announcementRequest of the number of approval letters available for financing a house for each quarter.
 - **Participation Submission**: Members can submit their participation for a specific quarter by entering their membership ID.
-- **Random Selection**: The system performs a random selection of members from the pool of participants to allocate approval letters.
-- **Notification**: Notifies selected members about the approval of their application for financing.
+- **Random Selection**: The system performs a random selection of memberResponse from the pool of participants to allocate approval letters.
+- **Notification**: Notifies selected memberResponse about the approval of their application for financing.
 
 ## How to Use
 1. **Compile**: Compile the Java source code files.
@@ -50,7 +50,7 @@ https://team.atlassian.com/project/IIOOXBVQ-2/updates
 https://teamtechforce.atlassian.net/wiki/spaces/SD/pages
 
 ## Bitbucket
-https://bitbucket.org/liked-tech-software/app001-members-approval-letter/src/main/
+https://bitbucket.org/liked-tech-software/app001-memberResponse-approval-letter/src/main/
 
 ## GitHub
 https://github.com/nour609/QurtabaHouseFinanceApproval
@@ -64,4 +64,4 @@ Nour Alden Alhaddad
 https://github.com/
 
 ## License
-This project is open source. Anyone can use it to select members who participate in competitions based on various factors to be taken into consideration, such as seniority, submission time, desire, etc.
+This project is open source. Anyone can use it to select memberResponse who participate in competitions based on various factors to be taken into consideration, such as seniority, submission time, desire, etc.

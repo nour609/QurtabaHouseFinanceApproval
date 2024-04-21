@@ -1,9 +1,11 @@
 package ca.qurtuba.app001membersapprovalletter.service;
 
-import ca.qurtuba.app001membersapprovalletter.domain.About.About;
-import ca.qurtuba.app001membersapprovalletter.domain.Announcement.AnnouncementRequest;
-import ca.qurtuba.app001membersapprovalletter.domain.Client.Client;
 import ca.qurtuba.app001membersapprovalletter.domain.Client.ClientResponse;
+import ca.qurtuba.app001membersapprovalletter.domain.Announcement.AnnouncementRequest;
+import ca.qurtuba.app001membersapprovalletter.domain.About.About;
+
+import ca.qurtuba.app001membersapprovalletter.domain.Client.Client;
+import ca.qurtuba.app001membersapprovalletter.domain.Member.MemberResponse;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -30,16 +32,31 @@ public class ClientService implements ClientsService{
         return announcementRequest;
     }
 
+
+    @Override
+    public About getAboutData() {
+        About about = new About();
+        about.setContactNumber("123456");
+        about.setEmailAddress("nour@hotmail.com");
+        return about;
+    }
+
+
     @Override
     public String welcomeMessage() {
         return "Welcome to Qurtuba";
     }
 
     @Override
-    public About getAboutData() {
-        About about = new About();
-        return null;
+    public String email() {
+        return "nour@qurtuba.ca";
     }
+
+    @Override
+    public String totalMembers() {
+        return "300";
+    }
+
 
 
 }
